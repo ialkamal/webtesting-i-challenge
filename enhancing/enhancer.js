@@ -14,8 +14,8 @@ function success(item) {
 function fail(item) {
   let newDurability = item.durability;
   let newEnhancement = item.enhancement;
-  if (item.durability < 15) {
-    newDurability = newDurability - 5 >= 0 ? newDurability - 5 : 0;
+  if (item.enhancement < 15) {
+    newDurability = item.durability - 5 >= 0 ? newDurability - 5 : 0;
   } else {
     newDurability -= 10;
     if (item.enhancement > 16) --newEnhancement;
